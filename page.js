@@ -1,7 +1,12 @@
 $(document).ready(function() {
-    
+
+    let texto = "";
     //gerar a arte
     $("#btngenerate").on("click", function() {
+
+        
+        texto = $("#input-text").val();
+        alert (texto);
 
         $("#content-section").css("display", "none");
         $("#output-section").css("display", "flex");
@@ -32,13 +37,22 @@ $(document).ready(function() {
 
     //carregar no the project
     $("#theproject").on("click", function() {
+        $('.card').toggleClass('inactive');
+        $('.card2').addClass('inactive');
 
-        $("#content-section").css("display", "none");
-        $("#output-section").css("display", "flex");
-        $("#btngenerate").css("display", "none");
-        $("#btngoback").css("display", "inline-flex");
-        $("#btnexport").css("display", "inline-flex");
+        
+        //$("#wrapper").css("display", "flex");
+        
     });
+
+    $("#theteam").on("click", function() {
+        $('.card2').toggleClass('inactive');
+        $('.card').addClass('inactive');
+        
+        
+    });
+
+  
 
 
 }); //doc  finish

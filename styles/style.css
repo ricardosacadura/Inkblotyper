@@ -26,13 +26,13 @@ body {
   height: 100vh;
   background-color: #0E0E0E;
   user-select: none;
-  color: honeydew;
+  color: whitesmoke;
 }
 
 nav{
   width: 100%;
   height: 5rem;
-  border-bottom: 1px solid honeydew;
+  border-bottom: 1px solid whitesmoke;
   display: inline-flex;
   position: fixed;
   flex-direction: row;
@@ -43,7 +43,7 @@ nav{
 }
 
 #titulo h1{
-  font-family: "Courier-Bold";
+  font-family: "Courier-Regular";
   font-size: 3rem;
   letter-spacing: 0.08em;
   padding-inline: 20px;
@@ -55,10 +55,12 @@ nav{
   letter-spacing: 0.08em;
   display: inline-flex;
   flex-direction: row;
-  padding-inline: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 #topics h2{
-  padding-inline: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 main{
@@ -68,8 +70,9 @@ main{
   font-family: "HelveticaNeue-01";
   font-size: 0.7rem;
   letter-spacing: 0.08em;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  margin-bottom: 5rem;
 }
 
 #content-section{
@@ -92,8 +95,8 @@ input[type=text]{
   border: none;
   outline: none;
   background-color: transparent;
-  color: honeydew;
-  border-bottom: 1px solid honeydew;
+  color: whitesmoke;
+  border-bottom: 1px solid whitesmoke;
   font-family: "Courier-Regular";
   font-variant-caps: all-petite-caps;
   font-size:6rem ;
@@ -101,7 +104,7 @@ input[type=text]{
   text-align: center;
 }
 input[type=text]::selection{
-  background: honeydew;
+  background: whitesmoke;
    color: rgb(0, 0, 0);
 }
 #content-section > h2{
@@ -111,10 +114,99 @@ input[type=text]::selection{
   }
 
 
+#wrapper{
+	margin-bottom: 5rem;
+  width: 500px;
+  height: 50%;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+
+  right: 0;
+  /*display: none;*/
+  ;
+  
+}
+
+#wrapper h2{
+  padding-bottom: 20px;
+  font-family: "Courier-Regular";
+  font-size: 2rem;
+}
+#wrapper p{
+  letter-spacing: 0.08em;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card{
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  transition: right .5s cubic-bezier(0.820, 0.085, 0.395, 0.895);
+
+  background-color: whitesmoke;
+  color: black;
+  
+}
+
+/*the team*/
+#wrapper2{
+	margin-bottom: 5rem;
+  width: 500px;
+  height: 50%;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+
+  right: 0;
+  /*display: none;*/
+  ;
+  
+}
+
+#wrapper2 h2{
+  padding-bottom: 20px;
+  font-family: "Courier-Regular";
+  font-size: 2rem;
+}
+#wrapper2 p{
+  letter-spacing: 0.08em;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card2{
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  transition: right .5s cubic-bezier(0.820, 0.085, 0.395, 0.895);
+
+  background-color: whitesmoke;
+  color: black;
+  
+}
+
+/*   kdjcnjdc */
+
+
+.inactive {
+  right: -550px;
+}
+.inactive {
+ 
+}
+
 footer{
   width: 100%;
   height: 5rem;
-  border-top: 1px solid honeydew;
+  border-top: 1px solid whitesmoke;
   display: inline-flex;
   position: fixed;
   flex-direction: row;
@@ -142,10 +234,10 @@ footer{
 .button {
   appearance: none;
   background-color: transparent;
-  border: 1px solid honeydew;
+  border: 1px solid whitesmoke;
   border-radius: 15px;
   box-sizing: border-box;
-  color: honeydew;
+  color: whitesmoke;
   font-size:0.7rem;
   line-height: normal;
   outline: none;
@@ -164,7 +256,7 @@ footer{
 }
 
 .button:hover {
-  color: honeydew;
+  color: whitesmoke;
   background-color: #1A1A1A;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: scale(30px);
@@ -181,8 +273,8 @@ footer{
   width: 10px;
   height: 10px;
   transform: translate(-50%, -50%);
-  background-color: white;
-  border: 1px solid white;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
   mix-blend-mode: difference;
   border-radius: 50%;
   pointer-events: none;
@@ -201,9 +293,37 @@ footer{
   width: 25px;
   height: 25px;
   transform: translate(-50%, -50%);
-  border: 1px solid white;
+  border: 1px solid whitesmoke;
   mix-blend-mode: difference;
   border-radius: 50%;
   pointer-events: none;
   
+}
+
+
+/*linha da nav no hover*/
+.linknav {
+  display: inline-block;
+  position: relative;
+  color: whitesmoke;
+}
+
+.linknav:after {
+  content: '';
+  position: absolute;
+  margin-left: 20px;
+ 
+  width: 75%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: whitesmoke;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.linknav:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
