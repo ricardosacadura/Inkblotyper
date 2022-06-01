@@ -68,6 +68,8 @@ main{
   font-family: "HelveticaNeue-01";
   font-size: 0.7rem;
   letter-spacing: 0.08em;
+  align-items: center;
+  justify-content: center;
 }
 
 #content-section{
@@ -126,6 +128,15 @@ footer{
   flex-direction: row;
   align-content: center;
   
+}
+#btngenerate{
+  display: inline-flex;
+}
+#btngoback{
+  display: none;
+}
+#btnexport{
+  display: none;
 }
 
 .button {
