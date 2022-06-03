@@ -1,12 +1,14 @@
+
+
 $(document).ready(function() {
 
-    let texto = "";
     //gerar a arte
     $("#btngenerate").on("click", function() {
 
         
+        var texto = "";
         texto = $("#input-text").val();
-        alert (texto);
+        //alert (texto);
 
         $("#content-section").css("display", "none");
         $("#output-section").css("display", "flex");

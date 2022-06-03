@@ -22,6 +22,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: 100vh;
   background-color: #0E0E0E;
@@ -66,13 +68,14 @@ nav{
 main{
   width: 100%;
   display: flex;
-  margin-top: 5rem;
+  /*margin-top: 5rem;*/
+  margin: auto 0 auto 0;
   font-family: "HelveticaNeue-01";
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 5rem;
+  /*margin-bottom: 5rem;*/
 }
 
 #content-section{
@@ -103,6 +106,7 @@ input[type=text]{
   width: 50vw;
   text-align: center;
 }
+
 input[type=text]::selection{
   background: whitesmoke;
    color: rgb(0, 0, 0);
@@ -199,11 +203,9 @@ input[type=text]::selection{
 .inactive {
   right: -550px;
 }
-.inactive {
- 
-}
 
 footer{
+  
   width: 100%;
   height: 5rem;
   border-top: 1px solid whitesmoke;

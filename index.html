@@ -7,29 +7,25 @@
     <title>Inkblotyper</title>
     <link rel="shortcut icon" type="image/png" href="styles/favicon2.png" />
 
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" type="text/css" href="styles/render.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/render.css" />
     <script src="libraries/p5.min.js" type="text/javascript"></script>
     <script src="jquery.min.js"></script>
   </head>
 
   <body>
-    
+
     <header>
-      
       <nav>
-    
         <div id="titulo">
           <h1>Inkblotyper</h1>
         </div>
-      
+
         <div id="topics">
           <a class="linknav" id="theproject"><h2>THE PROJECT</h2></a>
           <a class="linknav" id="theteam"> <h2>THE TEAM</h2></a>
         </div>
-    
       </nav>
-
     </header>
 
     <main>
@@ -37,49 +33,58 @@
 
       <div id="content-section">
         <div class="write-section">
-            <input type="text" spellCheck="false" id="input-text" name="texto" maxlength="10">
+          <input
+            type="text"
+            spellcheck="false"
+            id="input-text"
+            name="texto"
+            maxlength="10"
+          />
         </div>
-        <h2>TYPE A WORD</h2>
-        
-      </div>
 
-      
+        <h2>TYPE A WORD</h2>
+      </div>
 
       <div id="wrapper">
         <div class="card inactive">
-        <h2>THE PROJECT</h2>
-        <p>Inkblotyper is a project that was developed in the Computational Creativity for Design class, in the first year of the Design and Multimedia master's degree at the University of Coimbra.  </p>
+          <h2>THE PROJECT</h2>
+          <p>
+            Inkblotyper is a project that was developed in the Computational
+            Creativity for Design class, in the first year of the Design and
+            Multimedia master's degree at the University of Coimbra.
+          </p>
         </div>
       </div>
 
       <div id="wrapper2">
         <div class="card2 inactive">
-        <h2>THE TEAM</h2>
-        <p>Inkblotyper was developed by Mariana Tavares da Silva and Ricardo Rocha Sacadura in the Computational Creativity for Design class, in the first year of the Design and Multimedia master's degree at the University of Coimbra. (2022)</p>
+          <h2>THE TEAM</h2>
+          <p>
+            Inkblotyper was developed by Mariana Tavares da Silva and Ricardo
+            Rocha Sacadura in the Computational Creativity for Design class, in
+            the first year of the Design and Multimedia master's degree at the
+            University of Coimbra. (2022)
+          </p>
         </div>
       </div>
-
-    
-
     </main>
 
     <footer>
-
       <div class="buttons-section">
-        <button type="button" class="button" id="btngenerate">GENERATE TYPER</button>
+        <button type="button" class="button" id="btngenerate">
+          GENERATE TYPER
+        </button>
         <button type="button" class="button" id="btngoback">GO BACK</button>
         <button type="button" class="button" id="btnexport">EXPORT</button>
       </div>
-
     </footer>
 
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
 
-    <script src="sketch.js"></script>
-    <script src="cursor.js"></script>
-    <script src="page.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/type.js"></script>
+    <script src="js/type_generation.js"></script>
+    <script src="js/cursor.js"></script>
   </body>
-
 </html>
-
