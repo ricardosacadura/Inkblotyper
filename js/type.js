@@ -9,20 +9,20 @@ class Type {
         this.sf = sf;
     }
 
-    setposX(letras_w) {
+    setposX(letras_w) { // -> Function that sets the X position of the input word (textWidth)
         this.xpos = this.xpos - letras_w / 2;
 
         return this.xpos;
     }
 
-    setposY(font) {
+    setposY(font) { // -> Function that sets the Y position of the input word (textBounds.h)
 
         let box_letras = font.textBounds(this.letter, 0, 0, this.size);
         let h = box_letras.h;
         this.ypos = (this.ypos) + (h / 2);
 
-        print("larguraY - " + h + " palavra " + this.letter + " fontSize " + this.size);
-        print(this.ypos + " this.ypos1");
+        //print("larguraY - " + h + " palavra " + this.letter + " fontSize " + this.size);
+
 
         return this.ypos;
     }
@@ -30,7 +30,7 @@ class Type {
     generate(fontArray, mouse, original, distortion, dist, raio) {
 
 
-        print("y: " + this.ypos + " x: " + this.xpos + " size: " + this.size);
+        //print("y: " + this.ypos + " x: " + this.xpos + " size: " + this.size);
 
         fontArray = font.textToPoints(this.letter, this.xpos, this.ypos, this.size, // -> Mapping font to points
             this.sf);

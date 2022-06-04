@@ -1,5 +1,4 @@
 let font;
-let fontSize; // -> font size when rendered
 let fontArray;
 
 const raio = 200;
@@ -9,16 +8,14 @@ let mouse;
 let distortion;
 let dist;
 
-let type;
-let type2;
 
 let x_letter = 0;
 let y_letter = 0;
 
 let still_t = true; // -> toggle still image on/off
 
-let width_canvas = 1000;
-let height_canvas = 550;
+const width_canvas = 1000;
+const height_canvas = 550;
 
 
 //--------------------------------------Inkblots declarations
@@ -30,19 +27,22 @@ let still = false; // -> Toggle still image on/off
 let inkblots = [];
 
 
+//--------------------------------------Text rendering declarations
+
+let fontSize; // -> font size when rendered
 let texto;
 let num_letras;
 let tamX_letras;
-let tamY_letras;
 let textO;
+let type;
 
 
 function preload() {
 
-    font = loadFont('styles/fonts/HelveticaNeue-01.ttf');
+    font = loadFont('styles/fonts/HelveticaNeue-01.ttf'); // -> font preload
 }
 
-function setup() {
+function setup() { //----------------------------------------------------------SETUP---------------------------------------------------------------//
 
     const type_g = createCanvas(width_canvas, height_canvas);
     type_g.parent('#output-section');
@@ -52,7 +52,7 @@ function setup() {
     textFont(font);
     textSize(fontSize);
 
-    texto = $("#input-text").val();
+    texto = $("#input-text").val(); // -> receiving input value from html
     textO = texto.toUpperCase();
 
     num_letras = texto.length;
@@ -75,11 +75,12 @@ function setup() {
 
 }
 
-function draw() {
+function draw() { //---------------------------------------------------------DRAW------------------------------------------------------------------//
 
-    //print(frameRate());
+    //print(frameRate()); f***ing disaster
+    
     stroke(255)
-    strokeWeight(3);
+    strokeWeight(3); // TO DO -> Adjusting strokeWeight() to the number of letters ----------> VARIABLE;
 
     mouse.x = x_letter;
     mouse.y = y_letter;
