@@ -1,12 +1,11 @@
 
-
 $(document).ready(function() {
 
     //gerar a arte
     $("#btngenerate").on("click", function() {
 
         
-        var texto = "";
+        let texto = "";
         texto = $("#input-text").val();
         //alert (texto);
 
@@ -19,7 +18,7 @@ $(document).ready(function() {
 
     //voltar atras
     $("#btngoback").on("click", function() {
-
+        
         $("#content-section").css("display", "flex");
         $("#output-section").css("display", "none");
         $("#btngenerate").css("display", "inline-flex");

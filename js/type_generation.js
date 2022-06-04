@@ -1,8 +1,8 @@
 let font;
-const fontSize = 250;
+let fontSize; // -> font size when rendered
 let fontArray;
 
-const raio = 100;
+const raio = 200;
 
 let original;
 let mouse;
@@ -30,7 +30,10 @@ let still = false; // -> Toggle still image on/off
 let inkblots = [];
 
 
-var texto = "";
+let texto;
+let num_letras;
+let tamX_letras;
+let tamY_letras;
 let textO;
 
 
@@ -44,7 +47,7 @@ function setup() {
     const type_g = createCanvas(width_canvas, height_canvas);
     type_g.parent('#output-section');
 
-    frameRate(5);
+    frameRate(8);
 
     textFont(font);
     textSize(fontSize);
@@ -52,16 +55,23 @@ function setup() {
     texto = $("#input-text").val();
     textO = texto.toUpperCase();
 
-    type = new Type(textO, 100, 350, fontSize, // -> Mapping font to points & calling Type class
-        { sampleFactor: 1 });
+    num_letras = texto.length;
+    tamX_letras = textWidth(textO);
+    initInkBlots(); // -> Initializing my inkBlots
 
+    fontSize = 650 - num_letras * 65;
+
+    type = new Type(textO, width / 2, height/2, fontSize, // -> Mapping font to points & calling Type class
+        { sampleFactor: 0.5 });
+
+    type.setposX(tamX_letras);
+    type.setposY(font);
+    //print("texto - " + textO + " " + "tamX - " + tamX_letras);
 
     mouse = createVector(0, 0); // -> Vector for mouse x & y positions in the future
 
     da = PI / 100 // -> Delta angle
     dx = 0.05; // -> Noise increment value
-
-    initInkBlots(); // -> Initializing my inkBlots
 
 }
 
@@ -70,8 +80,6 @@ function draw() {
     //print(frameRate());
     stroke(255)
     strokeWeight(3);
-
-    //texto = document.getElementById("#input-text").value;
 
     mouse.x = x_letter;
     mouse.y = y_letter;
@@ -86,8 +94,6 @@ function draw() {
     }
 
     type.generate(fontArray, mouse, original, distortion, dist, raio); // -> Generate function from Type class
-
-
 }
 
 function windowResized() {
@@ -97,21 +103,18 @@ function windowResized() {
 }
 
 function mouseDragged() {
-
     x_letter = mouseX;
     y_letter = mouseY;
-
 }
 
 function keyPressed() {
 
     still = !still;
-
     still_t = !still_t;
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------//
-//--------------------------------------------------Rockchart's function drawns----------------------------------------------------------------//
+//--------------------------------------------------Roschart's function drawns----------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------------------------------------------------------//
 
 
