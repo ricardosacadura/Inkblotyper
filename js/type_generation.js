@@ -59,7 +59,7 @@ function setup() { //----------------------------------------------------------S
     tamX_letras = textWidth(textO);
     initInkBlots(); // -> Initializing my inkBlots
 
-    fontSize = 650 - num_letras * 65;
+    fontSize = 650 - num_letras * 80;
 
     type = new Type(textO, width / 2, height/2, fontSize, // -> Mapping font to points & calling Type class
         { sampleFactor: 0.5 });
@@ -77,8 +77,7 @@ function setup() { //----------------------------------------------------------S
 
 function draw() { //---------------------------------------------------------DRAW------------------------------------------------------------------//
 
-    //print(frameRate()); f***ing disaster
-    
+    //print(frameRate()); f***ing disaster    
     stroke(255)
     strokeWeight(3); // TO DO -> Adjusting strokeWeight() to the number of letters ----------> VARIABLE;
 

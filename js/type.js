@@ -35,7 +35,8 @@ class Type {
         fontArray = font.textToPoints(this.letter, this.xpos, this.ypos, this.size, // -> Mapping font to points
             this.sf);
 
-        stroke(255, 0, 0);
+        let cor = color(random(255),random(255),random(255));
+        stroke(255,0,0); //color(random(255),random(255),random(255));
 
         beginShape();
         for (let i = 0; i < fontArray.length; i++) {
