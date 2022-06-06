@@ -4,7 +4,8 @@
 
 
 class Rorschach {
-
+    
+    
     constructor(rMin, rMax, oscMin, oscMax, hue) {
 
         this.transX = width_canvas / 2;
