@@ -53,6 +53,15 @@ $(document).ready(function() {
         
     });
 
+    //clicar no x da gaveta
+ 
+    $(".iconify").on("click", function() {
+        $('.card').addClass('inactive');
+        $('.card2').addClass('inactive');
+        
+    });
+
+
   
 
 

@@ -20,7 +20,10 @@
   font-family: "HelveticaNeue-01";
   src: url("fonts/HelveticaNeue-01.ttf");
 }
-
+a {
+text-decoration: none;
+color: whitesmoke;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -154,6 +157,9 @@ input[type=text]::selection{
 
   background-color: whitesmoke;
   color: black;
+
+  display: flex;
+  flex-direction: column
   
 }
 
@@ -194,8 +200,23 @@ input[type=text]::selection{
 
   background-color: whitesmoke;
   color: black;
+
+  display: flex;
+  flex-direction: column
   
 }
+
+.orderrow{
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.iconify:hover{
+  width: 25px;
+  height: 25px;
+  transition: width 0.5s, height 0.5s;
+}
+
 
 /*   kdjcnjdc */
 
