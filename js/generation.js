@@ -36,6 +36,8 @@ let tamX_letras;
 let textO;
 let type;
 
+let getGraphics;
+
 
 function preload() {
 
@@ -46,6 +48,7 @@ function setup() { //----------------------------------------------------------S
 
     const type_g = createCanvas(width_canvas, height_canvas);
     type_g.parent('#output-section');
+    getGraphics = createGraphics(width_canvas, height_canvas);
 
     frameRate(8);
 
@@ -58,18 +61,18 @@ function setup() { //----------------------------------------------------------S
     num_letras = texto.length;
     tamX_letras = textWidth(textO);
 
-    rorschach[0] = new Rorschach(100, 300, -20, 20, 220); // -> initializing rorschach's
-    rorschach[1] = new Rorschach(-300, -50, 100, -100, 220);
-    rorschach[2] = new Rorschach(50, 300, -200, 200, '#0e0e0e');
-    rorschach[3] = new Rorschach(70, 140, 130, -130, '#0e0e0e');
-    rorschach[4] = new Rorschach(-400, 0, 20, -20, 220);
-    rorschach[5] = new Rorschach(50, 310, -10, 10, '#0e0e0e');
-    rorschach[6] = new Rorschach(-400, -20, 100, -50, 220);
-    rorschach[7] = new Rorschach(0, 100, 0, -100, 220);
+    rorschach[0] = new Rorschach(220); // -> initializing rorschach's
+    rorschach[1] = new Rorschach(220);
+    rorschach[2] = new Rorschach('#0e0e0e');
+    rorschach[3] = new Rorschach('#0e0e0e');
+    rorschach[4] = new Rorschach(220);
+    rorschach[5] = new Rorschach('#0e0e0e');
+    rorschach[6] = new Rorschach(220);
+    rorschach[7] = new Rorschach(220);
 
     fontSize = 650 - num_letras * 80;
 
-    type = new Type(textO, width / 2, height/2, fontSize, // -> Mapping font to points & calling Type class
+    type = new Type(textO, width / 2, height / 2, fontSize, // -> Mapping font to points & calling Type class
         { sampleFactor: 0.5 });
 
     type.setposX(tamX_letras);
@@ -96,7 +99,9 @@ function draw() { //---------------------------------------------------------DRA
         background('#0e0e0e');
         noStroke();
         for (i in rorschach) {
-            rorschach[i].drawRorschach();
+            rorschach[i].render(getGraphics);
+            rorschach[i].render(getGraphics);
+            rorschach[i].render(getGraphics);
         }
 
     }
